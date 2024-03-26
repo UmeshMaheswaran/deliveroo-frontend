@@ -72,7 +72,9 @@ main {
 
 .col-left {
   /* background-color: red; */
-  width: 68%;
+  /* width: 68%; */
+  flex: 1 1;
+  margin-right: 30px;
 }
 
 .col-right {
@@ -112,11 +114,42 @@ article .description {
   margin-bottom: 10px;
 }
 
-.panier {
+/* .panier {
   width: 350px;
   height: 50px;
 
   border-radius: 5px;
 
   /* border: solid blue 2px; */
+.cart {
+  position: sticky;
+  top: 0;
+  width: 350px;
+
+  /* background-color: aqua; */
+}
+
+.item-cart {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: center;
+  margin: 30px 0;
+}
+.empty-cart {
+  padding: 3rem 0;
+}
+
+.button-valide {
+  background-color: #00cdbd;
+  border: none;
+  border-radius: 5px;
+  color: #f3f5f5;
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 10px;
+  padding: 1rem;
+  cursor: pointer;
 }

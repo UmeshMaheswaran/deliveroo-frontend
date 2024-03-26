@@ -8,6 +8,8 @@ function App() {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
+  const [articlelist, setArticlelist] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
@@ -39,10 +41,6 @@ function App() {
         </div>
       </section>
       <main>
-        <button onClick={() => {}} className="container panier">
-          Valider mon panier
-        </button>
-
         <div className="container main-container">
           <section className="col-left">
             {" "}
@@ -75,7 +73,14 @@ function App() {
               }
             })}
           </section>
-          <section className="col-rigth"></section>
+          <section className="col-rigth">
+            <div className="cart">
+              <div className="item-cart">
+                <button className="button-valide"> Valider mon panier</button>
+                <div className="empty-cart">Votre panier est vide </div>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
     </>
