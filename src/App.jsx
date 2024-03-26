@@ -8,7 +8,7 @@ function App() {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
-  const [articlelist, setArticlelist] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -52,7 +52,16 @@ function App() {
                     <div className="articles-container">
                       {category.meals.map((meal) => {
                         return (
-                          <article key={meal.id}>
+                          <article
+                            key={meal.id}
+                            onClick={() => {
+                              const newCart = [...cart];
+                              newCart.push();
+                              setCart(newCart);
+
+                              console.log("jai cliqué");
+                            }}
+                          >
                             <div>
                               <h3>{meal.title}</h3>
                               <p className="description">{meal.description}</p>
